@@ -90,10 +90,10 @@ function new(self, handlers)
     end
 
     local title = headers["title"]
-    local content_type = headers["type"]
+    local content_type = headers["asset_type"]
     local asset_file = headers["asset_file"]
     local last = headers["last"]
-    local access_token = headers["access_token"]
+    local access_token = headers["my_token"]
 
     ctx.range_from = range_from
     ctx.range_to = range_to
