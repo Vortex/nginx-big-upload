@@ -93,7 +93,7 @@ function new(self, handlers)
     local content_type = headers["asset-type"]
     local asset_file = headers["asset-file"]
     local last = headers["last"]
-    local access_token = headers["my-token"]
+    local access_token = headers["access-token"]
 
     ctx.range_from = range_from
     ctx.range_to = range_to
