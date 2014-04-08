@@ -46,6 +46,9 @@ end
 function new(self, handlers)
     local ctx = {}
     local headers = ngx.req.get_headers()
+    ngx.req.read_body()
+    local args, err = ngx.req.get_post_args()
+    ngx.say(args["title"])
 
     local content_length = tonumber(headers["content-length"])
     if not content_length then
@@ -89,9 +92,7 @@ function new(self, handlers)
         end
     end
 
-    ngx.req.read_body()
-    local args, err = ngx.req.get_post_args()
-    ngx.say(args["title"])
+
 
     local title = headers["title"]
     local content_type = headers["asset_type"]
