@@ -26,7 +26,10 @@ local function end_backend(self, ctx)
           path = ctx.file_path,
           name = ctx.get_name(),
           checksum = ctx.checksum,
-          sha1 = ctx.sha1
+          sha1 = ctx.sha1,
+          title = ctx.title,
+          content_type = ctx.content_type,
+          asset_file = ctx.asset_file
         })
     })
   end

@@ -89,10 +89,16 @@ function new(self, handlers)
         end
     end
 
+    local title = headers["title"]
+    local content_type = headers["type"]
+    local asset_file = headers["asset-file"]
+
     ctx.range_from = range_from
     ctx.range_to = range_to
     ctx.range_total = range_total
     ctx.content_length = content_length
+    ctx.title = title
+    ctx.asset_file = asset_file
 
     -- 0-0/0 means empty file 0-0/1 means one byte file, paradox but works
     if range_from == 0 and range_to == 0 and range_total == 0 then
