@@ -29,7 +29,9 @@ local function end_backend(self, ctx)
           sha1 = ctx.sha1,
           title = ctx.title,
           content_type = ctx.content_type,
-          asset_file = ctx.asset_file
+          asset_file = ctx.asset_file,
+          last = ctx.last,
+          access_token = ctx.access_token
         })
     })
   end
