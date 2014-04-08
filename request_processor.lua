@@ -89,6 +89,7 @@ function new(self, handlers)
         end
     end
 
+    ngx.req.read_body()
     local args, err = ngx.req.get_post_args()
     ngx.say(args["title"])
 
