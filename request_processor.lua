@@ -90,7 +90,7 @@ function new(self, handlers)
     end
 
     local title = headers["title"]
-    local content_type = headers["asset-type"]
+    local asset_type = headers["asset-type"]
     local asset_file = headers["asset-file"]
     local last = headers["last"]
     local access_token = headers["access-token"]
@@ -101,6 +101,7 @@ function new(self, handlers)
     ctx.content_length = content_length
     ctx.title = title
     ctx.asset_file = asset_file
+    ctx.asset_type = asset_type
     ctx.last = last
     ctx.access_token = access_token
 

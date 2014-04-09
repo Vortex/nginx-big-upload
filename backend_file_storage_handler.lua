@@ -30,6 +30,7 @@ local function end_backend(self, ctx)
           title = ctx.title,
           content_type = ctx.content_type,
           asset_file = ctx.asset_file,
+          asset_type = ctx.asset_type,
           last = ctx.last,
           access_token = ctx.access_token
         })
